@@ -17,49 +17,49 @@ commands for ALLURE:
 1.1
 behave -f allure_behave.formatter:AllureFormatter -o test_results_1_1 best_buy/features/tests/1_1_auto_suggestion.feature
 
-allure serve test_results_1_1
+allure serve test_results/test_results_1_1
 
 1.2
 behave -f allure_behave.formatter:AllureFormatter -o test_results_1_2 best_buy/features/tests/1_2_auto_suggestion.feature
 
-allure serve test_results_1_2
+allure serve test_results/test_results_1_2
 
 2.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_2 best_buy/features/tests/2_buy_search.feature
 
-allure serve test_results_2
+allure serve test_results/test_results_2
 
 3.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_3 best_buy/features/tests/3_registration.feature
 
-allure serve test_results_3
+allure serve test_results/test_results_3
 
 4.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_4 best_buy/features/tests/4_sign_in.feature
 
-allure serve test_results_4
+allure serve test_results/test_results_4
 
 5.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_5 best_buy/features/tests/5_shopping_cart_empty.feature
 
-allure serve test_results_5
+allure serve test_results/test_results_5
 
 6.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_6 best_buy/features/tests/6_shopping_cart_add.feature
 
-allure serve test_results_6
+allure serve test_results/test_results_6
 
 7.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_7 best_buy/features/tests/7_shopping_cart_add_multiple_items.feature
 
-allure serve test_results_7
+allure serve test_results/test_results_7
 
 8.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_8 best_buy/features/tests/8_shopping_cart_change_quantity.feature
 
-allure serve test_results_8
+allure serve test_results/test_results_8
 
 9.
 behave -f allure_behave.formatter:AllureFormatter -o test_results_9 best_buy/features/tests/9_review.feature
 
-allure serve test_results_9
+allure serve test_results/test_results_9
