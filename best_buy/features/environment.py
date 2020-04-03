@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from best_buy.app import Application
+from best_buy.app.application import Application
 
 
 def browser_init(context):

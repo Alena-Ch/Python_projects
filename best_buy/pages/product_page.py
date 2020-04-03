@@ -1,25 +1,25 @@
-from best_buy.pages import Page
-import selenium.webdriver.common.by
+from best_buy.pages.base_page import Page
+from selenium.webdriver.common.by import By
 
 
 class ProductPage(Page):
     ROUTER = (
-        selenium.webdriver.common.by.By.XPATH,
+        By.XPATH,
         "//a[text()='NETGEAR - Nighthawk Dual-Band AC1900 Router with 24 x 8 DOCSIS 3.0 Cable Modem - Black']")
-    REVIEWS = (selenium.webdriver.common.by.By.XPATH, "//span[text()='Reviews']")
-    WRITE_REVIEW_BUTTON = (selenium.webdriver.common.by.By.XPATH, "//a[@class='btn btn-secondary v-medium write-a-review']")
+    REVIEWS = (By.XPATH, "//span[text()='Reviews']")
+    WRITE_REVIEW_BUTTON = (By.XPATH, "//a[@class='btn btn-secondary v-medium write-a-review']")
 
-    SMART_WATCH = (selenium.webdriver.common.by.By.XPATH, "//ol[@class='sku-item-list']//li[@class='sku-item'][1]//h4[@class='sku-header']/a")
+    SMART_WATCH = (By.XPATH, "//ol[@class='sku-item-list']//li[@class='sku-item'][1]//h4[@class='sku-header']/a")
     # or
     # SMART_WATCH =(By.CSS_SELECTOR, "#main-results .sku-item-list .sku-item:nth-child(2) .sku-title a")
 
-    ADD_TO_CART = (selenium.webdriver.common.by.By.XPATH, "//button[@class='btn btn-primary btn-lg btn-block btn-leading-ficon add-to-cart-button']")
-    ALERT = (selenium.webdriver.common.by.By.XPATH, "//div[@class='c-modal-grid col-xs-10']")
+    ADD_TO_CART = (By.XPATH, "//button[@class='btn btn-primary btn-lg btn-block btn-leading-ficon add-to-cart-button']")
+    ALERT = (By.XPATH, "//div[@class='c-modal-grid col-xs-10']")
 
-    GO_TO_CART_LINK = (selenium.webdriver.common.by.By.XPATH, "//span[@class='cart-nav-text'] ")
-    PROMPT_WINDOW = (selenium.webdriver.common.by.By.XPATH, "//div[@class='c-modal-grid col-xs-10']")
-    ITEM_COUNT_TEXT = (selenium.webdriver.common.by.By.XPATH, "//span[@class='item-count']")
-    ITEM_LIST = (selenium.webdriver.common.by.By.XPATH, "//ol[@class='sku-item-list']")
+    GO_TO_CART_LINK = (By.XPATH, "//span[@class='cart-nav-text'] ")
+    PROMPT_WINDOW = (By.XPATH, "//div[@class='c-modal-grid col-xs-10']")
+    ITEM_COUNT_TEXT = (By.XPATH, "//span[@class='item-count']")
+    ITEM_LIST = (By.XPATH, "//ol[@class='sku-item-list']")
 
     def click_on_product(self):
         self.click(*self.ROUTER)

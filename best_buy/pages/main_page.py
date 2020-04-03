@@ -1,5 +1,6 @@
 from best_buy.pages.base_page import Page
 from selenium.webdriver.common.by import By
+from time import sleep
 
 
 class MainPage(Page):
@@ -26,8 +27,11 @@ class MainPage(Page):
         # ----------------------------------------------------------
 
         self.input(text, *self.SEARCH_INPUT_FIELD)
+        sleep(3)
+        # or
         # self.wait_for_element_click(*self.SEARCH_ICON)
-        self.wait_for_text_to_be_present_in_element_value(text, *self.SEARCH_INPUT_FIELD)
+        # or
+        # self.wait_for_text_to_be_present_in_element_value(text, *self.SEARCH_INPUT_FIELD)
         self.click(*self.SEARCH_ICON)
 
     def click_on_cart_icon(self):

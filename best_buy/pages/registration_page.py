@@ -1,4 +1,4 @@
-from best_buy.pages import Page
+from best_buy.pages.base_page import Page
 from selenium.webdriver.common.by import By
 
 
@@ -41,4 +41,3 @@ class RegistrationPage(Page):
     def verify_header_result(self, expected_text: str):
         self.wait_for_element_appear(*self.USER_NAME_BUTTON)
         self.verify_element_text(expected_text, *self.HI_USER_TEXT)
-

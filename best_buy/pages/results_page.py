@@ -1,4 +1,4 @@
-from best_buy.pages import Page
+from best_buy.pages.base_page import Page
 from selenium.webdriver.common.by import By
 
 
