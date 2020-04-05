@@ -1,5 +1,6 @@
 from best_buy.pages.base_page import Page
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 from time import sleep
 
 
@@ -54,3 +55,7 @@ class MainPage(Page):
     def click_on_logo_icon(self):
         self.wait_for_element_located(*self.LOGO_ICON)
         self.click(*self.LOGO_ICON)
+
+    def select_search_category(self, option):
+        select = Select(self.find_element(*self.LOCATOR))
+        select.select_by_visible_text(option)
