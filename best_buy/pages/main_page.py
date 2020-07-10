@@ -14,9 +14,8 @@ class MainPage(Page):
     LOGO_ICON = (By.XPATH, "//div[@class='bby-logo-lv']")
     CART_ICON = (By.XPATH, "//div[@class='bby-cart lv']")
 
-    PROMPT_ALERT_DO_NOT_MISS_CLOSE_BUTTON = (By.XPATH, "//button[@class='close']")
-    PROMPT_ALERT_DO_NOT_MISS = (
-        By.XPATH, "//div[@class='modal fade email-submission-modal in']//div[@class='modal-content']")
+    PROMPT_ALERT_DO_NOT_MISS_CLOSE_BUTTON = (By.XPATH, "//button[@class='c-close-icon  c-modal-close-icon']")
+    PROMPT_ALERT_DO_NOT_MISS = (By.XPATH, "//div[@id='widgets-view-email-modal-mount']//div[@class='col-xs-12']")
 
     def open(self):
         self.open_page('https://www.bestbuy.com/')
@@ -25,10 +24,11 @@ class MainPage(Page):
         # close the Prompt Alert------------------------------------
         self.wait_for_element_appear(*self.PROMPT_ALERT_DO_NOT_MISS)
         self.click(*self.PROMPT_ALERT_DO_NOT_MISS_CLOSE_BUTTON)
+        sleep(4)
         # ----------------------------------------------------------
 
         self.input(text, *self.SEARCH_INPUT_FIELD)
-        sleep(3)
+        sleep(4)
         # or
         # self.wait_for_element_click(*self.SEARCH_ICON)
         # or

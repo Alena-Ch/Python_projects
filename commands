@@ -63,3 +63,28 @@ allure serve test_results/test_results_8
 behave -f allure_behave.formatter:AllureFormatter -o test_results_9 best_buy/features/tests/9_review.feature
 
 allure serve test_results/test_results_9
+
+
+
+
+
+
+
+COMMANDS FOR TO MAKE SCREENSHOTS:
+1.
+    element = context.driver.find_element(By.TAG_NAME, 'body')
+    element.screenshot("screenshot_full.png")
+
+
+    --"creenshot_full.png" - it will be screenshot name in my framework
+
+
+    or
+2.
+element = driver.find_element_by_tag_name('body')
+element_png = element.screenshot_as_png
+with open("test1.png", "wb") as file:
+file.write(element_png)
+
+
+--"test1.png" - it will be screenshot name in my framework

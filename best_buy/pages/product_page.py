@@ -25,6 +25,7 @@ class ProductPage(Page):
         self.click(*self.ROUTER)
 
     def click_on_reviews(self):
+        self.wait_for_element_click(*self.REVIEWS)
         self.click(*self.REVIEWS)
 
     def click_on_product_link(self):
@@ -38,7 +39,7 @@ class ProductPage(Page):
         self.wait_for_element_click(*self.GO_TO_CART_LINK)
 
     def verify_review_button(self, expected_text: str):
-        self.wait_for_element_located(*self.WRITE_REVIEW_BUTTON)
+        # self.wait_for_element_located(*self.WRITE_REVIEW_BUTTON)
         self.verify_element_text(expected_text, *self.WRITE_REVIEW_BUTTON)
 
     def print_suggestions(self, text: str):
