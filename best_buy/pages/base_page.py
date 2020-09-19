@@ -8,6 +8,7 @@ class Page:
     def __init__(self, driver):
         self.driver = driver
         self.driver.wait = WebDriverWait(self.driver, 15)
+        self.action = ActionChains(self.driver)
 
     def open_page(self, url: str):
         self.driver.get(url)
@@ -33,14 +34,13 @@ class Page:
         e = self.driver.find_element(*locator).text
         print(e)
 
-    # ???
     def print_number_of_list_elements(self, *locator):
         e = self.driver.find_elements(*locator)
         print(len(e))
 
     def hover_over_element(self, *locator):
         element = self.find_element(*locator)
-        self.actions.move_to_element(element).perform()
+        self.action.move_to_element(element).perform()
 
     def wait_for_element_click(self, *locator):
         e = self.driver.wait.until(EC.element_to_be_clickable(locator))
@@ -70,9 +70,7 @@ class Page:
         actual_text = self.driver.find_element(*locator).text
         assert actual_text == expected_text, f'Expected {expected_text}, but got {actual_text}'
 
-    def hover_over_element(self, *locator):
-        element = self.find_element(*locator)
-        self.actions.move_to_element(element).perform()
+
 
 
 
