@@ -1,6 +1,5 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.common.action_chains import ActionChains
 
 
 class Page:
@@ -8,7 +7,6 @@ class Page:
     def __init__(self, driver):
         self.driver = driver
         self.driver.wait = WebDriverWait(self.driver, 15)
-        self.action = ActionChains(self.driver)
 
     def open_page(self, url: str):
         self.driver.get(url)
@@ -37,10 +35,6 @@ class Page:
     def print_number_of_list_elements(self, *locator):
         e = self.driver.find_elements(*locator)
         print(len(e))
-
-    def hover_over_element(self, *locator):
-        element = self.find_element(*locator)
-        self.action.move_to_element(element).perform()
 
     def wait_for_element_click(self, *locator):
         e = self.driver.wait.until(EC.element_to_be_clickable(locator))
