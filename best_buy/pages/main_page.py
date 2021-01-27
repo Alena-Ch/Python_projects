@@ -24,13 +24,10 @@ class MainPage(Page):
         # close the Prompt Alert------------------------------------
         self.wait_for_element_appear(*self.PROMPT_ALERT_DO_NOT_MISS)
         self.click(*self.PROMPT_ALERT_DO_NOT_MISS_CLOSE_BUTTON)
-        sleep(4)
         # ----------------------------------------------------------
 
         self.input(text, *self.SEARCH_INPUT_FIELD)
-        sleep(4)
-        # or
-        # self.wait_for_element_click(*self.SEARCH_ICON)
+        self.wait_for_element_click(*self.SEARCH_ICON)
         # or
         # self.wait_for_text_to_be_present_in_element_value(text, *self.SEARCH_INPUT_FIELD)
         self.click(*self.SEARCH_ICON)
