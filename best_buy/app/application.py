@@ -1,4 +1,4 @@
-
+# class Application
 from best_buy.pages.main_page import MainPage
 from best_buy.pages.product_page import ProductPage
 from best_buy.pages.registration_page import RegistrationPage
