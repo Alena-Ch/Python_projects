@@ -1,12 +1,12 @@
-#  Scenario_9:
-#User is able to write a review
+# Scenario_9:
+# User is able to write a review
 
-#Steps:
-#1.	Open https://www.bestbuy.com/ page
-#2.	Insert Wifi router in search field
-#3.	On search results page choose something and click it
-#4.	click "write review" button
-#5.	expected product has "write review" button
+# Steps:
+# 1. Open https://www.bestbuy.com/ page
+# 2. Insert Wifi router in search field
+# 3. On search results page choose something and click it
+# 4. Click "write review" button
+# 5. Expected product has "write review" button
 
 Feature: Review feature
 

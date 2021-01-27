@@ -1,14 +1,13 @@
+# Scenario_3:
+# Verify that Registration flow works as expected
 
-#  Scenario_3:
-#Verify that Registration flow works as expected
-
-#Steps:
-#1.	Open https://www.bestbuy.com/ page
-#2.	Click account button
-#3.	Best Buy: click "Create account"
-#4.	Fill all fields with fake data
-#5.	Click submit
-#6.	Expected registration will be complete successfully
+# Steps:
+# 1. Open https://www.bestbuy.com/ page
+# 2. Click account button
+# 3. Best Buy: click "Create account"
+# 4. Fill all fields with fake data
+# 5. Click submit
+# 6. Expected registration will be complete successfully
 
 Feature: Registration
 

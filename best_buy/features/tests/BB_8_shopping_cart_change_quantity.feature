@@ -1,11 +1,11 @@
-#  Scenario_8:
-#Shopping cart - Change quantity
+# Scenario_8:
+# Shopping cart - Change quantity
 
-#Steps:
-#1.	Repeat step User is able to add an item to the Shopping Cart
-#2.	Click cart button
-#3.	Change quantity from 1 to 2
-#4.	Expected items in cart will be 2
+# Steps:
+# 1. Repeat step User is able to add an item to the Shopping Cart
+# 2. Click cart button
+# 3. Change quantity from 1 to 2
+# 4. Expected items in cart will be 2
 
 Feature: Shopping cart feature
 

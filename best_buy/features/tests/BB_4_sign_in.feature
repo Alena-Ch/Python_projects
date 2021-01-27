@@ -1,13 +1,12 @@
+# Scenario_4:
+# Verify that Sign-In with existing account works
 
-#  Scenario_4:
-#Verify that Sign-In with existing account works
-
-#Steps:
-#1.	Open https://www.bestbuy.com/ page
-#2.	Click account button
-#3.	Fill data from prev step
-#4.	Click submit
-#5.	Expected login will be complete successfully
+# Steps:
+# 1. Open https://www.bestbuy.com/ page
+# 2. Click account button
+# 3. Fill data from prev step
+# 4. Click submit
+# 5. Expected login will be complete successfully
 
 Feature: Sign-In feature
 
